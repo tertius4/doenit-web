@@ -1,10 +1,39 @@
 <script>
+  import { page } from "$app/state";
   import "../app.css";
   // jy kan later jou Google Play skakel hier invoeg
   const playLink = "https://play.google.com/store/apps/details?id=doenit.app";
   const redditLink = "https://www.reddit.com/r/Doenit";
   const githubLink = "https://github.com/tertius4/doenit";
 </script>
+
+<svelte:head>
+  <title>Doenit – Afrikaanse ToDo/Taaklys App | Organiseer jou lewe eenvoudig</title>
+  <meta
+    name="description"
+    content="Doenit is die eerste Afrikaanse ToDo/Taaklys toepassing. Organiseer jou lewe vanlyn, veilig en in jou moedertaal. Geen internet nodig, geen geraas – net jy en jou take."
+  />
+  <meta
+    name="keywords"
+    content="Doenit, Afrikaans, app, toep, toepassing, taaklys, todo, vanlyn, herhalende take, Suid-Afrika, produktiwiteit"
+  />
+  <meta property="og:title" content="Doenit – Afrikaanse ToDo/Taaklys App" />
+  <meta
+    property="og:description"
+    content="Organiseer jou lewe vanlyn, veilig en in jou moedertaal. Geen internet nodig, geen geraas – net jy en jou take."
+  />
+  <meta property="og:image" content="{page.url.href}/doenit-logo.webp" />
+  <meta property="og:url" content="{page.url.href}" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Doenit – Afrikaanse ToDo/Taaklys Toepassing" />
+  <meta
+    name="twitter:description"
+    content="Organiseer jou lewe vanlyn, veilig en in jou moedertaal. Geen internet nodig, geen geraas – net jy en jou take."
+  />
+  <meta name="twitter:image" content="{page.url.href}/doenit-logo.webp" />
+  <link rel="canonical" href="{page.url.href}" />
+</svelte:head>
 
 <main class="min-h-screen bg-page text-normal font-sans">
   <!-- Hero -->
@@ -57,9 +86,9 @@
   <section class="py-16 px-6 text-center">
     <h2 class="text-2xl font-semibold mb-6">Kyk hoe eenvoudig dit is</h2>
     <div class="flex flex-wrap justify-center gap-4">
-      <img src="tuisblad.webp" alt="Doenit tuisblad" class="rounded-xl shadow-md w-72" />
-      <img src="wysig-taak.webp" alt="Wysig taak skerm" class="rounded-xl shadow-md w-72" />
-      <img src="instellings.webp" alt="Doenit instellings" class="rounded-xl shadow-md w-72" />
+      <img src="tuisblad.webp" alt="Doenit tuisblad " loading="lazy" class="rounded-xl shadow-md w-72" />
+      <img src="wysig-taak.webp" alt="Wysig taak skerm" loading="lazy" class="rounded-xl shadow-md w-72" />
+      <img src="instellings.webp" alt="Doenit instellings skerm" loading="lazy" class="rounded-xl shadow-md w-72" />
     </div>
   </section>
 
