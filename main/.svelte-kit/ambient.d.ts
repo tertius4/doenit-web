@@ -123,7 +123,6 @@ declare module '$env/static/private' {
 	export const GTK_IM_MODULE_FILE_VSCODE_SNAP_ORIG: string;
 	export const GPG_AGENT_INFO: string;
 	export const VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
-	export const GIT_PAGER: string;
 	export const QT_IM_MODULE: string;
 	export const npm_config_globalconfig: string;
 	export const npm_config_init_module: string;
@@ -268,7 +267,6 @@ declare module '$env/dynamic/private' {
 		GTK_IM_MODULE_FILE_VSCODE_SNAP_ORIG: string;
 		GPG_AGENT_INFO: string;
 		VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
-		GIT_PAGER: string;
 		QT_IM_MODULE: string;
 		npm_config_globalconfig: string;
 		npm_config_init_module: string;

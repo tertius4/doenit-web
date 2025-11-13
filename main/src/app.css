@@ -95,4 +95,50 @@ body {
   .text-error {
     color: var(--color-error);
   }
+
+  /* Gradient utilities */
+  .bg-linear-to-r {
+    background: linear-gradient(to right, var(--tw-gradient-stops));
+  }
+  .bg-linear-to-br {
+    background: linear-gradient(to bottom right, var(--tw-gradient-stops));
+  }
+  .bg-linear-to-t {
+    background: linear-gradient(to top, var(--tw-gradient-stops));
+  }
+
+  /* Enhanced hover effects */
+  .hover\:scale-105:hover {
+    transform: scale(1.05);
+  }
+  .hover\:shadow-2xl:hover {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  }
+
+  /* Smooth animations */
+  .transition-all {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+  .duration-300 {
+    transition-duration: 300ms;
+  }
+
+  /* Gradient text support */
+  .bg-clip-text {
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+  .text-transparent {
+    color: transparent;
+  }
+
+  /* Custom orange for Reddit */
+  .bg-orange-500 {
+    background-color: #f97316;
+  }
+  .hover\:bg-orange-600:hover {
+    background-color: #ea580c;
+  }
 }

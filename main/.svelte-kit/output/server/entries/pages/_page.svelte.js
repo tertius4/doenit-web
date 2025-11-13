@@ -1,4 +1,4 @@
-import { F as attributes, G as attr, J as stringify, z as escape_html, K as clsx, x as head, N as ensure_array_like } from "../../chunks/index.js";
+import { G as attributes, J as attr, K as stringify, F as escape_html, N as clsx, x as head, O as ensure_array_like } from "../../chunks/index.js";
 function Avatar($$renderer, $$props) {
   $$renderer.component(($$renderer2) => {
     const { src, alt, $$slots, $$events, ...rest } = $$props;

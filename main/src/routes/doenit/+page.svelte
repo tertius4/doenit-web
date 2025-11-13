@@ -1,11 +1,8 @@
 <script>
-  import { page } from "$app/state";
-
-  const href = page.url.href;
-
   // jy kan later jou Google Play skakel hier invoeg
   const playLink = "https://play.google.com/store/apps/details?id=doenit.app";
-  const redditLink = "https://www.reddit.com/r/Doenit";
+  const redditLink = "https://www.reddit.com/r/Doenit/";
+  const xlink = "https://x.com/Tertius39";
   const githubLink = "https://github.com/tertius4/doenit";
 </script>
 
@@ -25,8 +22,8 @@
     property="og:description"
     content="Organiseer jou lewe vanlyn, veilig en in jou moedertaal. Geen internet nodig, geen geraas – net jy en jou take."
   />
-  <meta property="og:image" content="{href}/../doenit-logo.webp" />
-  <meta property="og:url" content={href} />
+  <meta property="og:image" content="/doenit-logo.webp" />
+  <meta property="og:url" content="https://tertius4.github.io/doenit" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Doenit – Afrikaanse ToDo/Taaklys Toepassing" />
@@ -34,88 +31,583 @@
     name="twitter:description"
     content="Organiseer jou lewe vanlyn, veilig en in jou moedertaal. Geen internet nodig, geen geraas – net jy en jou take."
   />
-  <meta name="twitter:image" content="{href}/../doenit-logo.webp" />
-  <link rel="canonical" {href} />
+  <meta name="twitter:image" content="/doenit-logo.webp" />
+  <link rel="canonical" href="https://tertius4.github.io/doenit" />
 </svelte:head>
 
 <main class="min-h-screen bg-page text-normal font-sans">
-  <!-- Hero -->
-  <section class="text-center py-16 px-4">
-    <img src="/../doenit-logo.webp" alt="Doenit logo" class="mx-auto mb-6 w-24 h-24" />
-    <h1 class="text-4xl font-bold mb-2">Doenit – Die Afrikaanse ToDo/Taaklys toepassing</h1>
-    <p class="text-lg mb-6">
-      Organiseer jou lewe eenvoudig, in jou eie taal. Geen internet nodig, geen geraas — net jy en jou take.
-    </p>
-    <a
-      href={playLink}
-      target="_blank"
-      rel="noopener noreferrer"
-      class="bg-primary hover:bg-primary/70 text-white px-6 py-3 rounded-full text-lg font-semibold transition-colors duration-300"
-    >
-      📲 Kry dit op Google Play
-    </a>
-  </section>
+  <!-- Hero Section with Gradient Background -->
+  <section
+    class="relative bg-linear-to-br from-primary/20 via-bg-page to-bg-surface text-center py-20 px-4 overflow-hidden"
+  >
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-5">
+      <div class="absolute top-10 left-10 w-32 h-32 border border-primary rounded-full"></div>
+      <div class="absolute bottom-20 right-20 w-24 h-24 border border-primary rounded-full"></div>
+      <div class="absolute top-1/2 left-1/4 w-16 h-16 bg-primary/20 rounded-full"></div>
+    </div>
 
-  <!-- Features -->
-  <section class="bg-surface py-12 px-6">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-2xl font-semibold mb-8">Hoekom Doenit?</h2>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
-        <div>
-          <h3 class="font-bold text-lg mb-2">🕒 Herhalende take</h3>
-          <p>Stel herinnerings op vir enige tydsinterval — daagliks, weekliks of elke paar maande.</p>
+    <div class="relative z-10 max-w-4xl mx-auto">
+      <div class="mb-8">
+        <img src="/doenit-logo.webp" alt="Doenit logo" class="mx-auto mb-6 w-48 h-48 drop-shadow-lg" />
+      </div>
+
+      <h1 class="text-5xl md:text-6xl font-bold mb-6 bg-linear-to-r from-text-0 to-primary bg-clip-text">Doenit</h1>
+      <p class="text-xl md:text-2xl text-muted mb-2">Die eerste Afrikaanse taaklys-app</p>
+      <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
+        Organiseer jou lewe op 'n eenvoudige en veilige wyse en in jou eie taal. Geen internet nodig — net jy en jou
+        take.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+        <a
+          href={playLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="bg-primary hover:bg-primary/80 text-white py-4 w-full sm:w-[40%] text-center rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl flex items-center gap-2"
+        >
+          <span class="w-full text-center text-nowrap">📲 Kry dit op Google Play</span>
+        </a>
+        <a
+          href={githubLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="bg-surface hover:bg-card border border-default text-center w-full sm:w-[40%] py-4 rounded-full text-lg font-semibold transition-all duration-300 flex items-center gap-2"
+        >
+          <span class="w-full text-center">🐙 Bekyk op GitHub</span>
+        </a>
+      </div>
+
+      <!-- Stats -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto">
+        <div class="text-center">
+          <div class="text-2xl font-bold text-primary">100%</div>
+          <div class="text-sm text-muted">Afrikaans</div>
         </div>
-        <div>
-          <h3 class="font-bold text-lg mb-2">🔒 Vanlyn & veilig</h3>
-          <p>Jou data bly op jou toestel, geënkripteer. Niks word aanlyn gestoor nie, tensy jy dit kies.</p>
+        <div class="text-center">
+          <div class="text-2xl font-bold text-primary">R 0</div>
+          <div class="text-sm text-muted">Gratis</div>
         </div>
-        <div>
-          <h3 class="font-bold text-lg mb-2">🧩 Maklike kategorieë</h3>
-          <p>Hou werk, huis en familie take apart met eenvoudige groepering en duidelike etikette.</p>
+        <div class="text-center">
+          <div class="text-2xl font-bold text-primary">🔒</div>
+          <div class="text-sm text-muted">Vanlyn</div>
         </div>
-        <div>
-          <h3 class="font-bold text-lg mb-2">🎨 Lig of donker tema</h3>
-          <p>Pas Doenit aan by jou styl — kies lig of donker in Instellings → Voorkoms.</p>
-        </div>
-        <div>
-          <h3 class="font-bold text-lg mb-2">👥 Binnekort</h3>
-          <p>Deel take met vriende en familie. Bou saam aan doelwitte en roetines.</p>
+        <div class="text-center">
+          <div class="text-2xl font-bold text-primary">🇿🇦</div>
+          <div class="text-sm text-muted">Suid-Afrika</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Screenshots -->
-  <section class="py-16 px-6 text-center">
-    <h2 class="text-2xl font-semibold mb-6">Kyk hoe eenvoudig dit is</h2>
-    <div class="flex flex-wrap justify-center gap-4">
-      <img src="tuisblad.webp" alt="Doenit tuisblad " loading="lazy" class="rounded-xl shadow-md w-72" />
-      <img src="wysig-taak.webp" alt="Wysig taak skerm" loading="lazy" class="rounded-xl shadow-md w-72" />
-      <img src="instellings.webp" alt="Doenit instellings skerm" loading="lazy" class="rounded-xl shadow-md w-72" />
+  <!-- Features -->
+  <section class="bg-surface py-16 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-strong">Hoekom Doenit?</h2>
+        <p class="text-lg text-muted max-w-2xl mx-auto">
+          Ontwerp vir Afrikaanse gebruikers wat waarde heg aan eenvoud, privaatheid en doeltreffendheid.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Feature 1 -->
+        <div
+          class="bg-card p-6 rounded-xl border border-border-default hover:border-primary/50 transition-all duration-300 group hover:transform hover:scale-105"
+        >
+          <div
+            class="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mb-4 group-hover:bg-primary/30 transition-colors"
+          >
+            <span class="text-2xl">🕒</span>
+          </div>
+          <h3 class="font-bold text-xl mb-3 text-strong">Herhalende take</h3>
+          <p class="text-muted leading-relaxed">
+            Stel herinnerings op vir enige tydsinterval — maandliks, weekliks of selfs elke tweede Donderdag. Perfek vir
+            roetines.
+          </p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div
+          class="bg-card p-6 rounded-xl border border-border-default hover:border-primary/50 transition-all duration-300 group hover:transform hover:scale-105"
+        >
+          <div
+            class="w-16 h-16 bg-success/20 rounded-full flex items-center justify-center mb-4 group-hover:bg-success/30 transition-colors"
+          >
+            <span class="text-2xl">🔒</span>
+          </div>
+          <h3 class="font-bold text-xl mb-3 text-strong">Vanlyn & veilig</h3>
+          <p class="text-muted leading-relaxed">
+            Jou data bly op jou toestel, geënkripteer. Geen internet nodig nie, en jy bepaal of jy rugsteun wil hê.
+          </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div
+          class="bg-card p-6 rounded-xl border border-border-default hover:border-primary/50 transition-all duration-300 group hover:transform hover:scale-105"
+        >
+          <div
+            class="w-16 h-16 bg-warning/20 rounded-full flex items-center justify-center mb-4 group-hover:bg-warning/30 transition-colors"
+          >
+            <span class="text-2xl">🧩</span>
+          </div>
+          <h3 class="font-bold text-xl mb-3 text-strong">Maklike kategorieë</h3>
+          <p class="text-muted leading-relaxed">
+            Hou werk, huis en familie take apart met eenvoudige groepering en duidelike kleur-etikette.
+          </p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div
+          class="bg-card p-6 rounded-xl border border-border-default hover:border-primary/50 transition-all duration-300 group hover:transform hover:scale-105"
+        >
+          <div
+            class="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mb-4 group-hover:bg-primary/30 transition-colors"
+          >
+            <span class="text-2xl">🎨</span>
+          </div>
+          <h3 class="font-bold text-xl mb-3 text-strong">Lig of donker tema</h3>
+          <p class="text-muted leading-relaxed">
+            Pas Doenit aan by jou styl — automaties volgens jou toestel se instelling, of kies self.
+          </p>
+        </div>
+
+        <!-- Feature 5 -->
+        <div
+          class="bg-card p-6 rounded-xl border border-border-default hover:border-primary/50 transition-all duration-300 group hover:transform hover:scale-105"
+        >
+          <div
+            class="w-16 h-16 bg-error/20 rounded-full flex items-center justify-center mb-4 group-hover:bg-error/30 transition-colors"
+          >
+            <span class="text-2xl">📱</span>
+          </div>
+          <h3 class="font-bold text-xl mb-3 text-strong">Tuisskerm-widgets</h3>
+          <p class="text-muted leading-relaxed">
+            Sien jou belangrike take direk op jou tuisskerm sonder om die app oop te maak.
+          </p>
+        </div>
+
+        <!-- Feature 6 -->
+        <div
+          class="bg-card p-6 rounded-xl border border-border-default hover:border-primary/50 transition-all duration-300 group hover:transform hover:scale-105 relative overflow-hidden"
+        >
+          <div class="absolute top-2 right-2 bg-primary text-white text-xs px-2 py-1 rounded-full">Binnekort 🔥</div>
+          <div
+            class="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mb-4 group-hover:bg-primary/30 transition-colors"
+          >
+            <span class="text-2xl">👥</span>
+          </div>
+          <h3 class="font-bold text-xl mb-3 text-strong">Deel met vriende</h3>
+          <p class="text-muted leading-relaxed">
+            Doenit Plus sal jou laat saamwerk aan take met vriende en familie. Bou saam aan doelwitte!
+          </p>
+        </div>
+      </div>
+
+      <!-- Special callout for Afrikaans -->
+      <div
+        class="mt-12 bg-linear-to-r from-primary/10 to-success/10 p-8 rounded-2xl border border-primary/20 text-center"
+      >
+        <h3 class="text-2xl font-bold mb-4 text-strong flex items-center justify-center gap-2">🇿🇦 Trots Afrikaans</h3>
+        <p class="text-lg text-muted max-w-3xl mx-auto">
+          Doenit is die <strong class="text-primary">eerste taaklys-toep</strong> wat volledig in Afrikaans ontwerp is. Gebruik
+          Doenit en versterk sommer jou taal ook.
+        </p>
+      </div>
     </div>
   </section>
 
-  <!-- Open Source & Trust -->
-  <section class="bg-page py-12 px-6 text-center">
-    <h2 class="text-2xl font-semibold mb-4">Betroubaar en oopbron</h2>
-    <p class="max-w-2xl mx-auto mb-6">
-      Doenit is volledig oopbron — jy kan self die kode sien op
-      <a href={githubLink} class="text-primary hover:underline">GitHub</a>. Geen data word aanlyn gestoor nie, tensy jy
-      rugsteun aktiveer.
-    </p>
+  <!-- Screenshots -->
+  <section class="py-16 px-6 text-center bg-page">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-strong">Kyk hoe eenvoudig is dit</h2>
+      <p class="text-lg text-muted mb-12 max-w-2xl mx-auto">
+        'n Paar skermskote om jou te wys hoe maklik dit is om jou lewe te organiseer met Doenit.
+      </p>
+
+      <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        <div class="group">
+          <div
+            class="relative overflow-hidden rounded-2xl shadow-lg group-hover:shadow-2xl transition-all duration-300"
+          >
+            <img
+              src="tuisblad.webp"
+              alt="Doenit tuisblad skerm"
+              loading="lazy"
+              class="w-full transform group-hover:scale-105 transition-transform duration-300"
+            />
+            <div
+              class="absolute inset-0 bg-linear-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            ></div>
+            <div
+              class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            >
+              <h4 class="font-semibold">Tuisblad</h4>
+              <p class="text-sm">Jou hele dag in een oogopslag</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="group">
+          <div
+            class="relative overflow-hidden rounded-2xl shadow-lg group-hover:shadow-2xl transition-all duration-300"
+          >
+            <img
+              src="wysig-taak.webp"
+              alt="Wysig taak skerm"
+              loading="lazy"
+              class="w-full transform group-hover:scale-105 transition-transform duration-300"
+            />
+            <div
+              class="absolute inset-0 bg-linear-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            ></div>
+            <div
+              class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            >
+              <h4 class="font-semibold">Wysig take</h4>
+              <p class="text-sm">Stel alles presies reg</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="group">
+          <div
+            class="relative overflow-hidden rounded-2xl shadow-lg group-hover:shadow-2xl transition-all duration-300"
+          >
+            <img
+              src="instellings.webp"
+              alt="Doenit instellings skerm"
+              loading="lazy"
+              class="w-full transform group-hover:scale-105 transition-transform duration-300"
+            />
+            <div
+              class="absolute inset-0 bg-linear-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            ></div>
+            <div
+              class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            >
+              <h4 class="font-semibold">Instellings</h4>
+              <p class="text-sm">Maak dit jou eie</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- Community -->
-  <section class="py-12 px-6 text-center">
-    <h2 class="text-2xl font-semibold mb-4">Word deel van die Doenit gemeenskap</h2>
-    <p class="max-w-2xl mx-auto mb-6">
-      Gesels saam oor voorstelle, nuwe idees en verbeterings by
-      <a href={redditLink} class="text-primary hover:underline">r/Doenit</a>.
-    </p>
+  <!-- Testimonials / User Feedback -->
+  <section class="py-16 px-6 bg-surface">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-strong">Wat sê gebruikers?</h2>
+        <p class="text-lg text-muted">Terugvoer van die r/Doenit gemeenskap en Google Play-resensies</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="bg-card p-6 rounded-xl border border-border-default">
+          <div class="flex items-center mb-4">
+            <div class="flex text-warning">⭐⭐⭐⭐⭐</div>
+          </div>
+          <p class="text-muted mb-4 italic">"Hou baie daarvan!"</p>
+          <div class="flex items-center">
+            <div
+              class="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center text-sm font-medium text-primary"
+            >
+              F
+            </div>
+            <div class="ml-3">
+              <div class="font-medium text-strong">Franco</div>
+              <div class="text-sm text-muted">Google Play</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="bg-card p-6 rounded-xl border border-border-default">
+          <div class="flex items-center mb-4">
+            <div class="flex text-warning">⭐⭐⭐⭐⭐</div>
+          </div>
+          <p class="text-muted mb-4 italic">"Uitstekend toep, dit is verbruikers vriendelike en werk goed."</p>
+          <div class="flex items-center">
+            <div
+              class="w-10 h-10 bg-success/20 rounded-full flex items-center justify-center text-sm font-medium text-success"
+            >
+              W
+            </div>
+            <div class="ml-3">
+              <div class="font-medium text-strong">Werner</div>
+              <div class="text-sm text-muted">Google Play</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="bg-card p-6 rounded-xl border border-border-default">
+          <div class="flex items-center mb-4">
+            <div class="flex text-warning">⭐⭐⭐⭐⭐</div>
+          </div>
+          <p class="text-muted mb-4 italic">
+            "Baie lekker om so n toepassing in afrikaans te kan hê. Baie gebruikersvriendelik."
+          </p>
+          <div class="flex items-center">
+            <div
+              class="w-10 h-10 bg-error/20 rounded-full flex items-center justify-center text-sm font-medium text-error"
+            >
+              H
+            </div>
+            <div class="ml-3">
+              <div class="font-medium text-strong">Heike</div>
+              <div class="text-sm text-muted">Google Play</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Community Stats -->
+      <div class="mt-12 text-center">
+        <div class="inline-flex items-center bg-primary/10 px-6 py-3 rounded-full">
+          <span class="text-primary font-semibold">Sluit aan by die gemeenskap op </span>
+          <a href={redditLink} class="text-primary hover:text-primary/80 font-bold ml-1 hover:underline">r/Doenit</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-16 px-6 bg-page">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-strong">Gereelde vrae</h2>
+        <p class="text-lg text-muted">Antwoorde op die mees algemene vrae oor Doenit</p>
+      </div>
+
+      <div class="space-y-6">
+        <!-- FAQ Item 1 -->
+        <details
+          class="bg-surface border border-border-default rounded-xl p-6 hover:border-primary/30 transition-colors group"
+        >
+          <summary class="font-semibold text-lg text-strong cursor-pointer flex items-center justify-between">
+            Is Doenit werklik gratis?
+            <span class="text-primary group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <div class="mt-4 text-muted leading-relaxed">
+            Ja! Doenit se kernfunksies is 100% gratis - take, kategorieë, herinnerings, widgets, alles. Ons het wel 'n <strong
+              >Doenit Plus</strong
+            > subskripsie wat binnekort premium funksies soos vriende-deling en outomatiese rugsteun sal bied.
+          </div>
+        </details>
+
+        <!-- FAQ Item 2 -->
+        <details
+          class="bg-surface border border-border-default rounded-xl p-6 hover:border-primary/30 transition-colors group"
+        >
+          <summary class="font-semibold text-lg text-strong cursor-pointer flex items-center justify-between">
+            Hoe veilig is my data?
+            <span class="text-primary group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <div class="mt-4 text-muted leading-relaxed">
+            Jou data bly op jou toestel en word plaaslik geënkripteer. Ons stoor niks op ons bedieners nie, tensy jy
+            spesifiek rugsteun aktiveer. Selfs dan word alles geënkripteer voordat dit jou toestel verlaat.
+          </div>
+        </details>
+
+        <!-- FAQ Item 3 -->
+        <details
+          class="bg-surface border border-border-default rounded-xl p-6 hover:border-primary/30 transition-colors group"
+        >
+          <summary class="font-semibold text-lg text-strong cursor-pointer flex items-center justify-between">
+            Wanneer kom Doenit na iOS?
+            <span class="text-primary group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <div class="mt-4 text-muted leading-relaxed">
+            Ons wil graag Doenit na iOS bring, maar die Apple Developer Program kos R1600 per jaar. As die
+            Android-weergawe genoeg ondersteuning kry, sal ons daardie koste kan regverdig. Hou r/Doenit dop vir nuutste
+            verwikkelinge!
+          </div>
+        </details>
+
+        <!-- FAQ Item 4 -->
+        <details
+          class="bg-surface border border-border-default rounded-xl p-6 hover:border-primary/30 transition-colors group"
+        >
+          <summary class="font-semibold text-lg text-strong cursor-pointer flex items-center justify-between">
+            Kan ek Engels ook gebruik?
+            <span class="text-primary group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <div class="mt-4 text-muted leading-relaxed">
+            Absoluut! Doenit ondersteun beide Afrikaans en Engels volledig. Jy kan maklik tussen die tale skakel in die
+            instellings-skerm.
+          </div>
+        </details>
+
+        <!-- FAQ Item 5 -->
+        <details
+          class="bg-surface border border-border-default rounded-xl p-6 hover:border-primary/30 transition-colors group"
+        >
+          <summary class="font-semibold text-lg text-strong cursor-pointer flex items-center justify-between">
+            Hoe kan ek help met ontwikkeling?
+            <span class="text-primary group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <div class="mt-4 text-muted leading-relaxed">
+            Doenit is oopbron! Jy kan bydra op <a href={githubLink} class="text-primary hover:underline">GitHub</a>,
+            deel jou idees op <a href={redditLink} class="text-primary hover:underline">r/Doenit</a>, of help ander
+            gebruikers. Elke bietjie hulp tel!
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Community & Final CTA -->
+  <section class="py-16 px-6 text-center bg-surface">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-strong">Word deel van die Doenit-familie</h2>
+      <p class="text-lg text-muted max-w-2xl mx-auto mb-8">
+        Sluit aan by duisende gebruikers wat reeds hul lewe organiseer met Doenit. Deel idees, kry hulp, en help ons
+        Doenit nog beter maak.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+        <a
+          href={redditLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-semibold transition-colors duration-300 flex items-center gap-2"
+        >
+          💬 r/Doenit gemeenskap
+        </a>
+        <a
+          href={xlink}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="bg-surface hover:bg-card border border-border-default text-normal px-6 py-3 rounded-full font-semibold transition-colors duration-300 flex items-center gap-2"
+        >
+          🐦 Volg op X (Twitter)
+        </a>
+      </div>
+
+      <!-- Final download CTA -->
+      <div class="bg-card p-8 rounded-2xl border border-border-default">
+        <h3 class="text-2xl font-bold mb-4 text-strong">Gereed om te begin?</h3>
+        <p class="text-muted mb-6">Begin vandag</p>
+        <a
+          href={playLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="bg-primary hover:bg-primary/80 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl inline-flex items-center gap-2"
+        >
+          📲 Kry Doenit nou - Gratis!
+        </a>
+        <p class="text-sm text-muted mt-4">Beskikbaar op Android via Google Play Store</p>
+      </div>
+    </div>
   </section>
 
   <!-- Footer -->
-  <footer class="text-center py-8 text-sm text-muted">
-    © 2025 Doenit • Ontwerp deur Tertius • Gebou met liefde in Suid-Afrika 🇿🇦
+  <footer class="bg-page border-t border-border-default py-12 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid md:grid-cols-4 gap-8 mb-8">
+        <!-- Brand -->
+        <div class="md:col-span-2">
+          <div class="flex items-center mb-4">
+            <img src="/../doenit-logo.webp" alt="Doenit logo" class="w-8 h-8 mr-2" />
+            <span class="text-xl font-bold text-strong">Doenit</span>
+          </div>
+          <p class="text-muted mb-4 max-w-md">
+            Die eerste Afrikaanse taaklys-app. Eenvoudig, veilig en volledig in jou moedertaal.
+          </p>
+          <div class="flex space-x-4">
+            <a
+              href={githubLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-muted hover:text-primary transition-colors"
+            >
+              💻 GitHub
+            </a>
+            <a
+              href={redditLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-muted hover:text-primary transition-colors"
+            >
+              💬 Reddit
+            </a>
+            <a
+              href={xlink}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-muted hover:text-primary transition-colors"
+            >
+              🐦 Twitter
+            </a>
+          </div>
+        </div>
+
+        <!-- Links -->
+        <div>
+          <h3 class="font-semibold text-strong mb-4">Skakels</h3>
+          <ul class="space-y-2 text-muted">
+            <li>
+              <a href={playLink} target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors"
+                >Google Play</a
+              >
+            </li>
+            <li>
+              <a
+                href={githubLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="hover:text-primary transition-colors">Brondekode</a
+              >
+            </li>
+            <li>
+              <a
+                href={redditLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="hover:text-primary transition-colors">Gemeenskap</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Support -->
+        <div>
+          <h3 class="font-semibold text-strong mb-4">Ondersteuning</h3>
+          <ul class="space-y-2 text-muted">
+            <li>
+              <a
+                href={redditLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="hover:text-primary transition-colors">Hulp & FAQ</a
+              >
+            </li>
+            <li>
+              <a href="mailto:tertius.van.staden@gmail.com" class="hover:text-primary transition-colors">Kontak ons</a>
+            </li>
+            <li>
+              <a
+                href={githubLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="hover:text-primary transition-colors">Raporteer 'n probleem</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom footer -->
+      <div class="border-t border-border-default pt-8 text-center">
+        <p class="text-sm text-muted">
+          © 2025 Doenit • Ontwerp deur <a href={xlink} class="text-primary hover:text-primary/80">Tertius</a> • Gebou met
+          ❤️ in Suid-Afrika 🇿🇦
+        </p>
+        <p class="text-xs text-muted mt-2">MIT-lisensie • Oopbron • Privaatheid-eerste</p>
+      </div>
+    </div>
   </footer>
 </main>
