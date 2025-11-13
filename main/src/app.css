@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @theme {
   /* v5 */
@@ -24,6 +24,14 @@
   --color-error: hsl(0, 70%, 60%);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+  line-height: 1.6;
+}
 
 /* Custom utility classes for shorter names */
 @layer utilities {

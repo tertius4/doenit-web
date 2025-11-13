@@ -9,10 +9,6 @@
       "_environment.js"
     ]
   },
-  "_context.js": {
-    "file": "chunks/context.js",
-    "name": "context"
-  },
   "_environment.js": {
     "file": "chunks/environment.js",
     "name": "environment"
@@ -30,10 +26,7 @@
   },
   "_index.js": {
     "file": "chunks/index.js",
-    "name": "index",
-    "imports": [
-      "_context.js"
-    ]
+    "name": "index"
   },
   "_index2.js": {
     "file": "chunks/index2.js",
@@ -42,7 +35,7 @@
       "_equality.js",
       "_exports.js",
       "_utils.js",
-      "_context.js"
+      "_index.js"
     ]
   },
   "_internal.js": {
@@ -51,8 +44,7 @@
     "imports": [
       "_index.js",
       "_environment.js",
-      "_equality.js",
-      "_context.js"
+      "_equality.js"
     ]
   },
   "_shared.js": {
@@ -76,16 +68,6 @@
       "_environment.js"
     ]
   },
-  "node_modules/@sveltejs/kit/src/runtime/components/svelte-5/error.svelte": {
-    "file": "entries/fallbacks/error.svelte.js",
-    "name": "entries/fallbacks/error.svelte",
-    "src": "node_modules/@sveltejs/kit/src/runtime/components/svelte-5/error.svelte",
-    "isEntry": true,
-    "imports": [
-      "_context.js",
-      "_index2.js"
-    ]
-  },
   "node_modules/@sveltejs/kit/src/runtime/server/index.js": {
     "file": "index.js",
     "name": "index",
@@ -97,6 +79,16 @@
       "_utils.js",
       "_internal.js",
       "_shared.js"
+    ]
+  },
+  "src/routes/+error.svelte": {
+    "file": "entries/pages/_error.svelte.js",
+    "name": "entries/pages/_error.svelte",
+    "src": "src/routes/+error.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_index2.js"
     ]
   },
   "src/routes/+layout.js": {
@@ -114,14 +106,17 @@
       "_index.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout.-KHbTi2V.css"
+      "_app/immutable/assets/_layout.B_-tiHFz.css"
     ]
   },
   "src/routes/+page.svelte": {
     "file": "entries/pages/_page.svelte.js",
     "name": "entries/pages/_page.svelte",
     "src": "src/routes/+page.svelte",
-    "isEntry": true
+    "isEntry": true,
+    "imports": [
+      "_index.js"
+    ]
   },
   "src/routes/doenit/+page.svelte": {
     "file": "entries/pages/doenit/_page.svelte.js",

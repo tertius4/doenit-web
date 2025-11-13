@@ -2,3 +2,6 @@ cd main
 npm run build
 cp -r ../build/* ../
 rm -rf ../build
+git add .
+git commit -m "Updated site content"
+git push

@@ -37,6 +37,6 @@ declare module "$app/types" {
 		};
 		Pathname(): "/" | "/doenit" | "/doenit/";
 		ResolvedPathname(): `${"" | `/${string}`}${ReturnType<AppTypes['Pathname']>}`;
-		Asset(): "/doenit-logo.webp" | "/instellings.webp" | "/robots.txt" | "/tuisblad.webp" | "/wysig-taak.webp" | string & {};
+		Asset(): "/doenit-logo.webp" | "/instellings.webp" | "/page-not-found.webp" | "/robots.txt" | "/sitemap.xml" | "/tertius_picture.webp" | "/tuisblad.webp" | "/wysig-taak.webp" | string & {};
 	}
 }

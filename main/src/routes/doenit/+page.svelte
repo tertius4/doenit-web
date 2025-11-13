@@ -1,10 +1,7 @@
 <script>
   import { page } from "$app/state";
 
-  
-
   const href = page.url.href;
-  
 
   // jy kan later jou Google Play skakel hier invoeg
   const playLink = "https://play.google.com/store/apps/details?id=doenit.app";
@@ -13,7 +10,8 @@
 </script>
 
 <svelte:head>
-  <title>Doenit – Afrikaanse ToDo/Taaklys App | Organiseer jou lewe eenvoudig</title>
+  <title>Doenit – Afrikaanse ToDo application/Taaklys toepassing</title>
+  <link rel="icon" href="/doenit-logo.webp" />
   <meta
     name="description"
     content="Doenit is die eerste Afrikaanse ToDo/Taaklys toepassing. Organiseer jou lewe vanlyn, veilig en in jou moedertaal. Geen internet nodig, geen geraas – net jy en jou take."
