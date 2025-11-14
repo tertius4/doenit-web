@@ -10,7 +10,7 @@ return {
 	assets: new Set(["doenit-logo.webp","instellings.webp","page-not-found.webp","robots.txt","sitemap.xml","tertius_picture.webp","tuisblad.webp","wysig-taak.webp"]),
 	mimeTypes: {".webp":"image/webp",".txt":"text/plain",".xml":"text/xml"},
 	_: {
-		client: {start:"_app/immutable/entry/start.gcq33eIX.js",app:"_app/immutable/entry/app.CFkHcsSk.js",imports:["_app/immutable/entry/start.gcq33eIX.js","_app/immutable/chunks/CuoRZ8fA.js","_app/immutable/chunks/1dizz45u.js","_app/immutable/chunks/BoVrtkMf.js","_app/immutable/chunks/0k9XCiTm.js","_app/immutable/chunks/kh4C5VZo.js","_app/immutable/entry/app.CFkHcsSk.js","_app/immutable/chunks/BoVrtkMf.js","_app/immutable/chunks/0k9XCiTm.js","_app/immutable/chunks/kh4C5VZo.js","_app/immutable/chunks/DsnmJJEf.js","_app/immutable/chunks/1dizz45u.js","_app/immutable/chunks/BWitIwhk.js","_app/immutable/chunks/BOkJ5hmU.js"],stylesheets:[],fonts:[],uses_env_dynamic_public:false},
+		client: {start:"_app/immutable/entry/start.DSHSKY1n.js",app:"_app/immutable/entry/app.Di9j1dGl.js",imports:["_app/immutable/entry/start.DSHSKY1n.js","_app/immutable/chunks/BT_-uFBQ.js","_app/immutable/chunks/1dizz45u.js","_app/immutable/chunks/BoVrtkMf.js","_app/immutable/chunks/0k9XCiTm.js","_app/immutable/chunks/kh4C5VZo.js","_app/immutable/entry/app.Di9j1dGl.js","_app/immutable/chunks/BoVrtkMf.js","_app/immutable/chunks/0k9XCiTm.js","_app/immutable/chunks/kh4C5VZo.js","_app/immutable/chunks/DsnmJJEf.js","_app/immutable/chunks/1dizz45u.js","_app/immutable/chunks/BWitIwhk.js","_app/immutable/chunks/BOkJ5hmU.js"],stylesheets:[],fonts:[],uses_env_dynamic_public:false},
 		nodes: [
 			__memo(() => import('./nodes/0.js')),
 			__memo(() => import('./nodes/1.js')),

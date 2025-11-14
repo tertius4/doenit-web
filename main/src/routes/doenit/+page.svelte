@@ -611,12 +611,12 @@
             </li>
             <li>
               <a
-                href="mailto:{support_email}?subject=Doenit%20Reaporteer%20n%20Probleem"
+                href="mailto:{support_email}?subject=Doenit%20Rapporteer%20n%20Probleem"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="hover:text-primary transition-colors"
               >
-                Raporteer 'n probleem
+                Rapporteer 'n probleem
               </a>
             </li>
           </ul>
