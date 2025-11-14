@@ -4,6 +4,7 @@
   const redditLink = "https://www.reddit.com/r/Doenit/";
   const xlink = "https://x.com/Tertius39";
   const githubLink = "https://github.com/tertius4/doenit";
+  const ios_waiting_list = "https://docs.google.com/forms/d/e/1FAIpQLSd95Q-fA4WIjmwKEbcjSOrzDqoYAE5Y3O_djThffA6-aBo10w/viewform?usp=header";
 </script>
 
 <svelte:head>
@@ -80,12 +81,13 @@
           <span class="w-full text-center text-nowrap">📲 Kry dit op Google Play</span>
         </a>
         <a
-          href={githubLink}
+          href={ios_waiting_list}
           target="_blank"
           rel="noopener noreferrer"
-          class="bg-surface hover:bg-card border border-default text-center w-full sm:w-[40%] py-4 rounded-full text-lg font-semibold transition-all duration-300 flex items-center gap-2"
+          class="bg-surface hover:bg-card border border-border-default text-center w-full sm:w-[40%] py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg flex items-center justify-center gap-2"
         >
-          <span class="w-full text-center">🐙 Bekyk op GitHub</span>
+          <span class="text-2xl">🍎</span>
+          <span class="text-nowrap">iOS Waglys</span>
         </a>
       </div>
 
