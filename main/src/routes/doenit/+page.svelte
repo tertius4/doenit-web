@@ -7,8 +7,7 @@
 </script>
 
 <svelte:head>
-  <!-- spellchecker:disable -->
-  <title>Doenit – Afrikaanse ToDo application/Taaklys toepassing</title>
+  <title>Doenit – Afrikaanse Taaklys toepassing/ToDo app</title>
   <link rel="icon" href="/doenit-logo.webp" />
   <meta
     name="description"
@@ -19,22 +18,32 @@
     content="Doenit, Afrikaans, app, toep, toepassing, taaklys, todo, vanlyn, herhalende take, Suid-Afrika, produktiwiteit"
   />
   <meta property="og:title" content="Doenit – Afrikaanse ToDo/Taaklys App" />
+  <meta name="twitter:title" content="Doenit – Afrikaanse ToDo/Taaklys Toepassing" />
+
+  <meta property="og:url" content="https://tertius4.github.io/doenit" />
+  <meta property="twitter:url" content="https://tertius4.github.io/doenit" />
+
+  <meta
+    property="description"
+    content="Organiseer jou lewe vanlyn, veilig en in jou moedertaal. Geen internet nodig, geen geraas – net jy en jou take."
+  />
   <meta
     property="og:description"
     content="Organiseer jou lewe vanlyn, veilig en in jou moedertaal. Geen internet nodig, geen geraas – net jy en jou take."
   />
-  <meta property="og:image" content="https://tertius4.github.io/doenit-logo.webp" />
-  <meta property="og:url" content="https://tertius4.github.io/doenit" />
-  <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Doenit – Afrikaanse ToDo/Taaklys Toepassing" />
   <meta
     name="twitter:description"
     content="Organiseer jou lewe vanlyn, veilig en in jou moedertaal. Geen internet nodig, geen geraas – net jy en jou take."
   />
+
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="twitter:domain" content="tertius4.github.io" />
+
+  <meta property="og:image" content="https://tertius4.github.io/doenit-logo.webp" />
   <meta name="twitter:image" content="https://tertius4.github.io/doenit-logo.webp" />
+
   <link rel="canonical" href="https://tertius4.github.io/doenit" />
-  <!-- spellchecker:enable -->
 </svelte:head>
 
 <main class="min-h-screen bg-page text-normal font-sans">
