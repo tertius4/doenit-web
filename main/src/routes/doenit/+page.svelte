@@ -7,7 +7,7 @@
 </script>
 
 <svelte:head>
-  <title>Doenit – Afrikaanse Taaklys toepassing/ToDo app</title>
+  <title>Doenit – Afrikaanse Taaklys-toep/ToDo app</title>
   <link rel="icon" href="/doenit-logo.webp" />
   <meta
     name="description"
@@ -17,8 +17,8 @@
     name="keywords"
     content="Doenit, Afrikaans, app, toep, toepassing, taaklys, todo, vanlyn, herhalende take, Suid-Afrika, produktiwiteit"
   />
-  <meta property="og:title" content="Doenit – Afrikaanse ToDo/Taaklys App" />
-  <meta name="twitter:title" content="Doenit – Afrikaanse ToDo/Taaklys Toepassing" />
+  <meta property="og:title" content="Doenit – Afrikaanse Taaklys-toep/ToDo app" />
+  <meta name="twitter:title" content="Doenit – Afrikaanse Taaklys-toep/ToDo app" />
 
   <meta property="og:url" content="https://tertius4.github.io/doenit" />
   <meta property="twitter:url" content="https://tertius4.github.io/doenit" />
