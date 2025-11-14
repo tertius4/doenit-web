@@ -1,9 +1,10 @@
 <script>
   // jy kan later jou Google Play skakel hier invoeg
-  const playLink = "https://play.google.com/store/apps/details?id=doenit.app";
-  const redditLink = "https://www.reddit.com/r/Doenit/";
-  const xlink = "https://x.com/Tertius39";
-  const githubLink = "https://github.com/tertius4/doenit";
+  const play_link = "https://play.google.com/store/apps/details?id=doenit.app";
+  const reddit_link = "https://www.reddit.com/r/Doenit/";
+  const x_link = "https://x.com/Tertius39";
+  const github_link = "https://github.com/tertius4/doenit";
+  const support_email = "doenitapp@gmail.com";
   const ios_waiting_list =
     "https://docs.google.com/forms/d/e/1FAIpQLSd95Q-fA4WIjmwKEbcjSOrzDqoYAE5Y3O_djThffA6-aBo10w/viewform?usp=header";
 </script>
@@ -74,7 +75,7 @@
 
       <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
         <a
-          href={playLink}
+          href={play_link}
           target="_blank"
           rel="noopener noreferrer"
           class="bg-primary hover:bg-primary/80 text-white py-4 w-full sm:w-[40%] text-center rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl flex items-center gap-2"
@@ -381,7 +382,7 @@
       <div class="mt-12 text-center">
         <div class="inline-flex items-center bg-primary/10 px-6 py-3 rounded-full">
           <span class="text-primary font-semibold">Sluit aan by die gemeenskap op </span>
-          <a href={redditLink} class="text-primary hover:text-primary/80 font-bold ml-1 hover:underline">r/Doenit</a>
+          <a href={reddit_link} class="text-primary hover:text-primary/80 font-bold ml-1 hover:underline">r/Doenit</a>
         </div>
       </div>
     </div>
@@ -463,8 +464,8 @@
             <span class="text-primary group-open:rotate-180 transition-transform">▼</span>
           </summary>
           <div class="mt-4 text-muted leading-relaxed">
-            Doenit is oopbron! Jy kan bydra op <a href={githubLink} class="text-primary hover:underline">GitHub</a>,
-            deel jou idees op <a href={redditLink} class="text-primary hover:underline">r/Doenit</a>, of help ander
+            Doenit is oopbron! Jy kan bydra op <a href={github_link} class="text-primary hover:underline">GitHub</a>,
+            deel jou idees op <a href={reddit_link} class="text-primary hover:underline">r/Doenit</a>, of help ander
             gebruikers. Elke bietjie hulp tel!
           </div>
         </details>
@@ -483,7 +484,7 @@
 
       <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
         <a
-          href={redditLink}
+          href={reddit_link}
           target="_blank"
           rel="noopener noreferrer"
           class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-semibold transition-colors duration-300 flex items-center gap-2"
@@ -491,7 +492,7 @@
           💬 r/Doenit gemeenskap
         </a>
         <a
-          href={xlink}
+          href={x_link}
           target="_blank"
           rel="noopener noreferrer"
           class="bg-surface hover:bg-card border border-border-default text-normal px-6 py-3 rounded-full font-semibold transition-colors duration-300 flex items-center gap-2"
@@ -505,7 +506,7 @@
         <h3 class="text-2xl font-bold mb-4 text-strong">Gereed om te begin?</h3>
         <p class="text-muted mb-6">Begin vandag</p>
         <a
-          href={playLink}
+          href={play_link}
           target="_blank"
           rel="noopener noreferrer"
           class="bg-primary hover:bg-primary/80 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl inline-flex items-center gap-2"
@@ -532,7 +533,7 @@
           </p>
           <div class="flex space-x-4">
             <a
-              href={githubLink}
+              href={github_link}
               target="_blank"
               rel="noopener noreferrer"
               class="text-muted hover:text-primary transition-colors"
@@ -540,7 +541,7 @@
               💻 GitHub
             </a>
             <a
-              href={redditLink}
+              href={reddit_link}
               target="_blank"
               rel="noopener noreferrer"
               class="text-muted hover:text-primary transition-colors"
@@ -548,7 +549,7 @@
               💬 Reddit
             </a>
             <a
-              href={xlink}
+              href={x_link}
               target="_blank"
               rel="noopener noreferrer"
               class="text-muted hover:text-primary transition-colors"
@@ -563,13 +564,18 @@
           <h3 class="font-semibold text-strong mb-4">Skakels</h3>
           <ul class="space-y-2 text-muted">
             <li>
-              <a href={playLink} target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors"
-                >Google Play</a
+              <a
+                href={play_link}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="hover:text-primary transition-colors"
               >
+                Google Play
+              </a>
             </li>
             <li>
               <a
-                href={githubLink}
+                href={github_link}
                 target="_blank"
                 rel="noopener noreferrer"
                 class="hover:text-primary transition-colors">Brondekode</a
@@ -577,7 +583,7 @@
             </li>
             <li>
               <a
-                href={redditLink}
+                href={reddit_link}
                 target="_blank"
                 rel="noopener noreferrer"
                 class="hover:text-primary transition-colors">Gemeenskap</a
@@ -592,34 +598,29 @@
           <ul class="space-y-2 text-muted">
             <li>
               <a
-                href={redditLink}
+                href={reddit_link}
                 target="_blank"
                 rel="noopener noreferrer"
-                class="hover:text-primary transition-colors">Hulp & FAQ</a
+                class="hover:text-primary transition-colors"
               >
+                Hulp & FAQ
+              </a>
             </li>
             <li>
-              <a href="mailto:tertius.van.staden@gmail.com" class="hover:text-primary transition-colors">Kontak ons</a>
+              <a href="mailto:{support_email}" class="hover:text-primary transition-colors">Kontak my</a>
             </li>
             <li>
               <a
-                href={githubLink}
+                href="mailto:{support_email}?subject=Doenit%20Reaporteer%20n%20Probleem"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="hover:text-primary transition-colors">Raporteer 'n probleem</a
+                class="hover:text-primary transition-colors"
               >
+                Raporteer 'n probleem
+              </a>
             </li>
           </ul>
         </div>
-      </div>
-
-      <!-- Bottom footer -->
-      <div class="border-t border-border-default pt-8 text-center">
-        <p class="text-sm text-muted">
-          © 2025 Doenit • Ontwerp deur <a href={xlink} class="text-primary hover:text-primary/80">Tertius</a> • Gebou met
-          ❤️ in Suid-Afrika 🇿🇦
-        </p>
-        <p class="text-xs text-muted mt-2">MIT-lisensie • Oopbron • Privaatheid-eerste</p>
       </div>
     </div>
   </footer>
