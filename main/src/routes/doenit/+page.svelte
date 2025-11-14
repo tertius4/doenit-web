@@ -14,7 +14,7 @@
   <link rel="icon" href="/doenit-logo.webp" />
   <meta
     name="description"
-    content="Doenit is die eerste Afrikaanse ToDo/Taaklys toepassing. Organiseer jou lewe vanlyn, veilig en in jou moedertaal. Geen internet nodig, geen geraas – net jy en jou take."
+    content="Doenit is die eerste Afrikaanse ToDo/Taaklys toepassing. Organiseer jou lewe vanlyn, veilig en in jou moedertaal. Geen internet nodig nie, geen geraas – net jy en jou take."
   />
   <meta
     name="keywords"
@@ -28,15 +28,15 @@
 
   <meta
     property="description"
-    content="Organiseer jou lewe vanlyn, veilig en in jou moedertaal. Geen internet nodig, geen geraas – net jy en jou take."
+    content="Organiseer jou lewe vanlyn, veilig en in jou moedertaal. Geen internet nodig nie, geen geraas – net jy en jou take."
   />
   <meta
     property="og:description"
-    content="Organiseer jou lewe vanlyn, veilig en in jou moedertaal. Geen internet nodig, geen geraas – net jy en jou take."
+    content="Organiseer jou lewe vanlyn, veilig en in jou moedertaal. Geen internet nodig nie, geen geraas – net jy en jou take."
   />
   <meta
     name="twitter:description"
-    content="Organiseer jou lewe vanlyn, veilig en in jou moedertaal. Geen internet nodig, geen geraas – net jy en jou take."
+    content="Organiseer jou lewe vanlyn, veilig en in jou moedertaal. Geen internet nodig nie, geen geraas – net jy en jou take."
   />
 
   <meta property="og:type" content="website" />
@@ -69,7 +69,7 @@
       <h1 class="text-5xl md:text-6xl font-bold mb-6 bg-linear-to-r from-text-0 to-primary bg-clip-text">Doenit</h1>
       <p class="text-xl md:text-2xl text-muted mb-2">Die eerste Afrikaanse taaklys-app</p>
       <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
-        Organiseer jou lewe op 'n eenvoudige en veilige wyse en in jou eie taal. Geen internet nodig — net jy en jou
+        Organiseer jou lewe op 'n eenvoudige en veilige wyse en in jou eie taal. Geen internet nodig nie — net jy en jou
         take.
       </p>
 
