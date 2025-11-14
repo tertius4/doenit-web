@@ -4,7 +4,8 @@
   const redditLink = "https://www.reddit.com/r/Doenit/";
   const xlink = "https://x.com/Tertius39";
   const githubLink = "https://github.com/tertius4/doenit";
-  const ios_waiting_list = "https://docs.google.com/forms/d/e/1FAIpQLSd95Q-fA4WIjmwKEbcjSOrzDqoYAE5Y3O_djThffA6-aBo10w/viewform?usp=header";
+  const ios_waiting_list =
+    "https://docs.google.com/forms/d/e/1FAIpQLSd95Q-fA4WIjmwKEbcjSOrzDqoYAE5Y3O_djThffA6-aBo10w/viewform?usp=header";
 </script>
 
 <svelte:head>
@@ -84,10 +85,9 @@
           href={ios_waiting_list}
           target="_blank"
           rel="noopener noreferrer"
-          class="bg-surface hover:bg-card border border-border-default text-center w-full sm:w-[40%] py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg flex items-center justify-center gap-2"
+          class="bg-card border border-default text-center w-full py-4 sm:w-[40%] rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
         >
-          <span class="text-2xl">🍎</span>
-          <span class="text-nowrap">iOS Waglys</span>
+          <span class="w-full text-center text-nowrap">🍎 iOS Waglys</span>
         </a>
       </div>
 
@@ -103,7 +103,7 @@
         </div>
         <div class="text-center">
           <div class="text-2xl font-bold text-primary">🔒</div>
-          <div class="text-sm text-muted">Vanlyn</div>
+          <div class="text-sm text-muted">Vanlyn (offline)</div>
         </div>
         <div class="text-center">
           <div class="text-2xl font-bold text-primary">🇿🇦</div>
