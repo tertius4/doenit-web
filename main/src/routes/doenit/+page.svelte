@@ -23,7 +23,7 @@
     property="og:description"
     content="Organiseer jou lewe vanlyn, veilig en in jou moedertaal. Geen internet nodig, geen geraas – net jy en jou take."
   />
-  <meta property="og:image" content="https://tertius4.github.io/main/doenit-logo.webp" />
+  <meta property="og:image" content="https://tertius4.github.io/doenit-logo.webp" />
   <meta property="og:url" content="https://tertius4.github.io/doenit" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -32,7 +32,7 @@
     name="twitter:description"
     content="Organiseer jou lewe vanlyn, veilig en in jou moedertaal. Geen internet nodig, geen geraas – net jy en jou take."
   />
-  <meta name="twitter:image" content="https://tertius4.github.io/main/doenit-logo.webp" />
+  <meta name="twitter:image" content="https://tertius4.github.io/doenit-logo.webp" />
   <link rel="canonical" href="https://tertius4.github.io/doenit" />
   <!-- spellchecker:enable -->
 </svelte:head>
